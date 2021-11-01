@@ -6,10 +6,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container{
+           /* border: 1px solid red; */
+            height: 630px;
+            width: 50%;
+            font-family: Montserrat,sans-serif;
+            line-height: 280%;
+            padding-left: 10%;
+        }
+        .firstDiv{
+            font-size: 13px;
+            width: 28%;
+            
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        li{
+           list-style: none;
+        }
+        .secondDiv{
+            
+            background-color: rgb(247, 244, 244);
+            font-size: 18px;
+            padding: 5px;
+            width: 45%;
+            margin-left: 10px;
+            
+        }
+        input{
+            padding: 10px;
+            width: 45%;
+        }
+        label{
+            font-weight: bold;
+        }
+        button{
+            padding: 10px;
+            width: 40%;
+            background-color: black;
+            color: rgb(247, 54, 86);
+            margin-top: 20px;
+            
+            font-size: large;
+        }
+        span{
+            color: red;
+        }
+        #btn2{
+            width: 9%;
+            border-radius: 30px;
+            height: 55px;
+            color: white;
+            font-size: medium;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>dfgfh</h1>
+    <div class="container">
+        <div class="firstDiv">
+            <ul>
+                <li>Home</li>
+                <p1>></p1>
+                <li>Create Account</li>
+            </ul>
+            
+        </div>  
+        <h2>CREATE ACCOUNT</h2>
+        <div class="secondDiv">
+            <p2>CREATE A NEW ACCOUNT</p2>
+        </div>
+        <label for="">First Name <span>*</span></label>
+        <br/>
+        <input type="text">
+        <br>
+        <label for="">Last Name <span>*</span></label>
+        <br/>
+        <input type="text">
+        <br>
+        <label for="">Email <span>*</span></label>
+        <br/>
+        <input type="text">
+        <br>
+        <label for="">Password <span>*</span></label>
+        <br/>
+        <input type="password">
+        <br>
+        <button>CREATE AN ACCOUNT</button>
+        
+    </div>
+    <button id="btn2">Chat with us!</button>
 </body>
 
 </html>
