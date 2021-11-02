@@ -9,12 +9,14 @@ function stickyElement(e) {
     navbar.classList.add("is-fixed");
     ham.classList.remove("disable");
     ham.classList.remove("active");
+    document.querySelector(".goToTop").classList.remove("goToTop-block");
     document.querySelector(".bottomNav").classList.add("bottomNav-block");
     document.querySelector(".bottomNav").classList.remove("sideNav");
     document.querySelector(".navOrder").classList.add("navOrder-block");
   } else if (scrollValue < 150) {
     navbar.classList.remove("is-fixed");
     ham.classList.add("disable");
+    document.querySelector(".goToTop").classList.add("goToTop-block");
     document.querySelector(".bottomNav").classList.add("bottomNav-block");
     document.querySelector(".bottomNav").classList.remove("sideNav");
     document.querySelector(".navOrder").classList.add("navOrder-block");
