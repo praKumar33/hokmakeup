@@ -344,19 +344,25 @@ input:focus{
   border:1px solid black;
   top: 65%;
   right:8%;
-  width:40px;
-  height:40px;
+  width:30px;
+  height:30px;
   border-radius: 50%;
   z-index: 999;
-  display:flex;
-  align-items: center;
-  justify-content:flex-end;
 }
 .goToTop:hover{
-  background-color: #000000;
-}
-.goToTop>a:hover{
+  background-color: #ffffff;
   filter: invert();
+}
+.icon-chevron-up{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
 }
 .goToTop-block{
   display:none;
