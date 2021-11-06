@@ -33,6 +33,11 @@ var search = document.querySelector(".sm-search");
 search.addEventListener("click", function () {
   document.querySelector(".big-search").classList.toggle("big-search-flex");
 });
+document.querySelector(".login-btn").addEventListener("click", function () {
+  document
+    .querySelector(".login-window")
+    .classList.toggle("login-window-block");
+});
 ////////////////////////////////////
 // slider
 var slide = document.querySelector(".slides");
