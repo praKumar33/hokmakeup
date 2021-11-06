@@ -125,6 +125,9 @@
   .main-log span{
   color: red;
   }
+  .remove-log{
+    cursor: pointer;
+  }
   /* main navbar start */
   .mainNav{
 

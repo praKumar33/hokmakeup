@@ -38,6 +38,9 @@ document.querySelector(".login-btn").addEventListener("click", function () {
     .querySelector(".login-window")
     .classList.toggle("login-window-block");
 });
+document.querySelector(".remove-log").addEventListener("click", function () {
+  document.querySelector(".login-window").classList.add("login-window-block");
+});
 ////////////////////////////////////
 // slider
 var slide = document.querySelector(".slides");
