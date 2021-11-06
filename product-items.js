@@ -2,6 +2,7 @@ var data = [
   {
     img: "https://cdn.shopify.com/s/files/1/1743/7443/products/Wet-N-Wild-Silk-Finish-Lipstick-Pink-Ice_8eab4628-e702-4767-add5-5de8c695612b_270x270.jpg?v=1615547171",
     off: "10",
+    cat: "eyes",
     brand: "Wet N Wild",
     name: "Wet N Wild Silk Finish Lipstick",
     rating: "4",
@@ -13,6 +14,7 @@ var data = [
   {
     img: "https://cdn.shopify.com/s/files/1/1743/7443/products/GC964_prod_img_1024x1024_b1c6fca1-4d87-45d6-a3b1-d0c2f6688594_270x270.jpg?v=1630140295",
     off: "25",
+    cat: "face",
     brand: "L.A. Girl",
     name: "LA Girl Pro Conceal HD",
     rating: "5",
@@ -24,6 +26,7 @@ var data = [
   {
     img: "https://cdn.shopify.com/s/files/1/1743/7443/products/77802537539_270x270.jpg?v=1615547671",
     off: "10",
+    cat: "brushes",
     brand: "Wet N Wild",
     name: "Wet N Wild Photo Focus Foundation",
     rating: "4",
@@ -35,6 +38,7 @@ var data = [
   {
     img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
     off: "10",
+    cat: "kits",
     brand: "Wet N Wild",
     name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
     rating: "4",
@@ -46,6 +50,7 @@ var data = [
   {
     img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
     off: "10",
+    cat: "lips",
     brand: "Wet N Wild",
     name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
     rating: "4",
@@ -57,6 +62,7 @@ var data = [
   {
     img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
     off: "10",
+    cat: "nails",
     brand: "Wet N Wild",
     name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
     rating: "4",
