@@ -427,9 +427,10 @@ input:focus{
   display:flex;
   align-items: center;
   justify-content:center;
+  background-color: #ffffff;
 }
 .goToTop:hover{
-  background-color: #ffffff;
+
   filter: invert();
 }
 .goToTop-block{

@@ -348,9 +348,10 @@ input:focus{
   height:30px;
   border-radius: 50%;
   z-index: 999;
+  background-color: #ffffff;
 }
 .goToTop:hover{
-  background-color: #ffffff;
+ 
   filter: invert();
 }
 .icon-chevron-up{
@@ -375,6 +376,7 @@ input:focus{
 .main-sec{
     width: 1170px;
     margin: auto;
+    margin-bottom: 100px;
 }
 .head-sec{
     padding: 17px 0;
