@@ -4,7 +4,6 @@ function stickyElement(e) {
   var mainNavHeight = getComputedStyle(mainNav).height.split("px")[0];
   var navbar = document.querySelector(".nav");
   var scrollValue = window.scrollY;
-  console.log(mainNavHeight);
   if (scrollValue > 150) {
     navbar.classList.add("is-fixed");
     ham.classList.remove("disable");
@@ -33,4 +32,36 @@ ham.addEventListener("click", function () {
 var search = document.querySelector(".sm-search");
 search.addEventListener("click", function () {
   document.querySelector(".big-search").classList.toggle("big-search-flex");
+});
+document.querySelector(".filter-toggle").addEventListener("click", function () {
+  document
+    .querySelector(".left-navgitaion")
+    .classList.add("left-navgitaion-toggle");
+});
+document
+  .querySelector(".remove-filter-toggle")
+  .addEventListener("click", function () {
+    document
+      .querySelector(".left-navgitaion")
+      .classList.remove("left-navgitaion-toggle");
+  });
+
+/////////////////////////
+// product page
+
+document.querySelector(".f1").addEventListener("click", function () {
+  document.querySelector(".l1").classList.toggle("filter-lists-block");
+  document.querySelector(".c1").classList.toggle("icon-chevron-up-rotate");
+});
+document.querySelector(".f2").addEventListener("click", function () {
+  document.querySelector(".l2").classList.toggle("filter-lists-block");
+  document.querySelector(".c2").classList.toggle("icon-chevron-up-rotate");
+});
+document.querySelector(".f3").addEventListener("click", function () {
+  document.querySelector(".l3").classList.toggle("filter-lists-block");
+  document.querySelector(".c3").classList.toggle("icon-chevron-up-rotate");
+});
+document.querySelector(".f4").addEventListener("click", function () {
+  document.querySelector(".l4").classList.toggle("filter-lists-block");
+  document.querySelector(".c4").classList.toggle("icon-chevron-up-rotate");
 });
