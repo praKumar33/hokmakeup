@@ -1,0 +1,135 @@
+@media only screen and (max-width: 1200px) {
+    .bottomNav-block,header{
+       display:none;
+   }
+   .disable{
+       display:inline-block;
+   }
+   .mainNav-left{
+       padding-left: 10px;
+   }
+   .mainNav-content{
+  width:100%;
+}
+.search-bar{
+    display:none;
+}
+.mainNav-left{
+    width:60%
+}
+.fav-cart>hr{
+   display:none;
+   
+}
+.mainNav{
+    padding: 2px;
+  }
+  .logo{
+      width:120px;
+      height:40px;
+  }
+.sm-search{
+    display:block;
+    margin-right: 50%;
+}
+.big-search{
+    border: 1px solid rgb(212, 212, 212);
+    padding:10px;
+    border-radius: 5px;
+    margin:10px;
+}
+.big-search-flex{
+    display:flex;
+}
+.big-search>input{
+  width:100%;
+  height:30px;
+  border: none;
+}
+.image-slider{
+    width:95%;
+}
+.btns{
+    display:none;
+}
+.brand-slider button{
+    display:none;
+}
+.brand-slider{
+    width:100%;
+    height:300px;
+}
+.featured-brands{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+  }
+  .brand-box{
+    width:100%;
+    height:100%;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    position:static;
+    transform:translate(-50% -50%)
+  }
+
+  .brand-box>div>img{
+    margin: 0 1%;
+    padding: 0 1%;
+    width:45%;
+  }
+  .brand-box>:nth-child(1)>:nth-child(1){
+    margin: 0 1%;
+    }
+/* ////////////////////////// */
+/* sec2 */
+.sec2-img>img{
+    width: 100%;
+  }
+  .hot-content{
+    width:100%;
+    grid-template-columns: 1fr;
+    place-content: center;
+    padding: 0 15%;
+
+}
+.hot-content>img{
+    border:1px solid red;
+    width:100%;
+}
+}
+@media only screen and (max-width: 900px) {
+    .sm-search{
+        margin-right: 30%;
+    }
+    .featured-brands{
+        height:300px;
+    }
+    .hot-content{
+        padding: 0 5%;
+    
+    }
+}
+@media only screen and (max-width: 600px) {
+    .sm-search{
+        margin-right: 0;
+    }
+    .featured-brands{
+        height:330px;
+    }
+    .hot-content{
+        padding: 0 3%;
+    
+    }
+}
+@media only screen and (max-width: 400px) {
+    .featured-brands{
+        height:250px;
+    }
+    .hot-content{
+        padding: 0 1%;
+    
+    }
+}

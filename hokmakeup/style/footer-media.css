@@ -1,0 +1,41 @@
+@media only screen and (max-width: 1200px) {
+    .footer-content{
+        width: 100%;
+        display:grid;
+        grid-template-areas:
+        "a a a a"
+        "b c . ."
+        "d . . ."
+        "e e . ."
+        "f f . .";
+        gap: 20px;
+    }
+}
+@media only screen and (max-width: 900px) {
+     
+}
+@media only screen and (max-width: 600px) {
+    .footer-content{
+        width: 100%;
+        display:grid;
+        grid-template-areas:
+        "a a a a"
+        "b c . ."
+        "d d . ."
+        "e e . ."
+        "f f . .";
+        gap: 20px;
+    }
+   .foot3{
+       display:none;
+   }
+   .footer *{
+       margin: 0;
+   }
+   .foot4{
+       margin-top:20px;
+   }
+}
+@media only screen and (max-width: 400px) {
+   
+}
