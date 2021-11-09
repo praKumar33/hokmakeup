@@ -7,6 +7,9 @@
     list-style: none;
     text-decoration: none;
 }
+button{
+  cursor: pointer;
+}
 body{
   overflow-x:hidden;
 }
@@ -600,7 +603,10 @@ input:focus{
   grid-template-columns: repeat(4,212px);
   gap: 30px;
   margin-top: 20px;
-  place-content: center;
+ place-content: center;
+}
+.main-product-sec{
+  min-height:100vh;
 }
 .pr-img{
   width:220px;

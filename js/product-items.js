@@ -1,4 +1,4 @@
-var data = [
+var dummyData = [
   {
     img: "https://cdn.shopify.com/s/files/1/1743/7443/products/Wet-N-Wild-Silk-Finish-Lipstick-Pink-Ice_8eab4628-e702-4767-add5-5de8c695612b_270x270.jpg?v=1615547171",
     off: "10",
@@ -127,6 +127,9 @@ var data = [
     disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
   },
 ];
+//////////////////////////
+localStorage.setItem("data",JSON.stringify(dummyData))
+var data = JSON.parse(localStorage.getItem("data"))
 displayItem(data);
 ///////////////////////////
 // filters
@@ -170,6 +173,12 @@ function displayFilter(filter) {
           arr.push(item);
           return item;
         }
+      } else if (cat == "cat") {
+        console.log(val);
+        if (item.cat == val) {
+          arr.push(item);
+          return item;
+        }
       }
     });
     l = false;
@@ -178,6 +187,33 @@ function displayFilter(filter) {
   if (arr.length == 0 && l) {
     displayItem(data);
   }
+}
+///////////////////////////////////////////
+function sortProducts() {
+  var value = document.getElementById("sortProducts").value;
+  var arr = [];
+  if (value == "low") {
+    arr = data.sort(function (a, b) {
+      return a.price - b.price;
+    });
+  } else if (value == "high") {
+    arr = data.sort(function (a, b) {
+      return b.price - a.price;
+    });
+  } else if (value == "new") {
+    arr = data.sort(function (a, b) {
+      return a.review - b.review;
+    });
+  } else if (value == "new") {
+    arr = data.sort(function (a, b) {
+      return a.rating - b.rating;
+    });
+  } else if (value == "best") {
+    arr = data.sort(function (a, b) {
+      return b.rating - a.rating;
+    });
+  }
+  displayItem(arr);
 }
 
 function displayItem(dat) {

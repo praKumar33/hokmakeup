@@ -15,12 +15,6 @@
     <link rel="canonical" href="https://www.hokmakeup.com/collections/makeup">
     <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/1743/7443/files/32_x_32_32x32.jpg?v=1612001738"
         type="image/png">
-<<<<<<< Updated upstream
-    <title>Makeup
-        &ndash; HOK Makeup</title>
-=======
-    <!-- <link rel="stylesheet" href="style/footer.css"> -->
->>>>>>> Stashed changes
 </head>
 
 <body>
@@ -211,20 +205,28 @@
                         </svg>CATEGORY</div>
                     <div class="filter-lists l1">
                         <div class="filter-list">
-                            <input type="checkbox" class="fils" onclick="fil()" id="df">
+                            <input type="checkbox" class="fils" onclick="fil()" value="cat>eyes">
                             Eyes
                         </div>
                         <div class="filter-list">
-                            <input type="checkbox" class="fils" onclick="fil()" id="face">
+                            <input type="checkbox" class="fils" onclick="fil()" value="cat>face">
                             Face
                         </div>
                         <div class="filter-list">
-                            <input type="checkbox" class="fils" onclick="fil()" id="eyes">
-                            Eyes
+                            <input type="checkbox" class="fils" onclick="fil()" value="cat>nails">
+                            Nails
                         </div>
                         <div class="filter-list">
-                            <input type="checkbox" class="fils" onclick="fil()" id="eyes">
-                            Eyes
+                            <input type="checkbox" class="fils" onclick="fil()" value="cat>lips">
+                            Lips
+                        </div>
+                        <div class="filter-list">
+                            <input type="checkbox" class="fils" onclick="fil()" value="cat>brushes">
+                            Brushes
+                        </div>
+                        <div class="filter-list">
+                            <input type="checkbox" class="fils" onclick="fil()" value="cat>kits">
+                            Kits
                         </div>
 
                     </div>
@@ -387,9 +389,9 @@
                         </div>
                         <p class="sort-by">SORT BY</p>
                         <div class="sort-box">
-                            <select>
+                            <select id="sortProducts" onchange="sortProducts()">
                                 <option value="">Featured</option>
-                                <option value="Best">Best Selling</option>
+                                <option value="best">Best Selling</option>
                                 <option value="low">Price, low to high</option>
                                 <option value="high">Price, high to low</option>
                                 <option value="new">What's New</option>
@@ -399,8 +401,10 @@
                 </div>
                 <!-- main product section -->
                 <!-- main product section -->
-                <div class="products-sec">
+                <div class="main-product-sec">
+                    <div class="products-sec">
 
+                    </div>
                 </div>
                 <!-- ////////// -->
             </div>
