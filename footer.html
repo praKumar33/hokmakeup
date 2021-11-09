@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+    #footer{
+        background-color: #222325;
+        width: 100%;
+        height: 500px;
+        color: white;  
+        margin: auto; 
+    }
+    #footer>:nth-child(1)
+    {
+        text-align: center;width: 85%; border-bottom: 1px solid 
+        #39393b;margin: auto;
+        padding: 2px;
+    }
+    #footer-info{
+        width: 85%;
+        height: 91%;
+        /* border:1px solid rgb(131, 110, 70); */
+        margin: auto;
+        display: flex;
+margin-top: 10px;
+flex-wrap: wrap;
+    }
+    #footer-info>:nth-child(1)
+    {
+        /* border: 1px solid white; */
+        width: 20%;
+        height: 75%;
+    }
+    #footer-info>:nth-child(2)
+    {
+        /* border: 1px solid white; */
+        width: 20%;
+        height: 75%;
+    }
+    #footer-info>:nth-child(3)
+    {
+        /* border: 1px solid white; */
+        width: 40%;
+        height: 75%;
+    }
+    #footer-info>:nth-child(4)
+    {
+        /* border: 1px solid white; */
+        width: 20%;
+        height: 75%;
+    }
+    a{
+        color: #dfdfdf;
+        
+
+    }
+    p{
+        padding-bottom: 6px;
+        font-size: 14px;
+        color: #dfdfdf;
+        display: block;
+        transition:1s;
+    }
+    a:hover{
+        color: hotpink;
+        text-decoration-line: underline;
+       
+    }
+    h4{
+        margin-bottom: 15px;
+        color: #dfdfdf;
+    }
+    h3{
+        color: #dfdfdf;
+    }
+    input{
+        padding: 10px;
+        margin-right: 7px;
+        margin-top: 20px;
+        border-radius: 3px;
+        border: none;
+        width: 300px;
+    }
+    
+    button{
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 3px;
+        border: none;
+        background-color: hotpink;
+        color: white;
+        width: 100px;
+        cursor: pointer;
+    }
+    i{
+        color: #dfdfdf;
+    }
+    span{
+        color: #dfdfdf;
+        
+    }
+    #rights{
+        background-color: #2e3033;
+        padding-left: 100px;
+        color: #dfdfdf;
+        padding-top: 7px;
+        height: 40px;
+    }
+    #facebookicon,#instagramicon,#twittericon{
+        color: #dfdfdf;
+        border: 1px solid #dfdfdf;
+        padding: 5px;
+        margin-right: 20px;
+        padding-left: 6px;
+        border-radius: 50%;
+    }
+    #icon{
+        margin-top: 45px;
+        
+    }
+    #location{
+        display: inline-block;height: 30%;width: 90%;color: #dfdfdf; margin-bottom: 15px;font-size: 14px;
+    }
+    @media screen and (min-width:696px) and (max-width:1019px)
+    {
+     #footer{
+         height: 1020px;
+     }   
+        #footer-info{
+        display: block;
+        height: 500px;
+        }
+        #footer-info>:nth-child(1)
+        {
+            display: inline-block;
+            width: 30%;
+            margin-bottom: 0px;
+            height: 63%;
+        }
+        #footer-info>:nth-child(2)
+        {
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            margin-bottom: 0px;
+            height: 63%;
+        }
+        #footer-info>:nth-child(3)
+        {
+            margin: 0px;
+            height: 63%;
+        }
+        #footer-info>:nth-child(4){
+            width: 50%;
+            height: 50%;
+            margin-top: 25px;
+        }
+        #location{
+            margin-bottom: 25px ;
+        height: 50px;
+        /* width: 70%; */
+            padding-bottom: 0px ;
+        }
+        #phone{
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        
+    }
+    @media screen and (min-width:0px) and (max-width:696px)
+    {
+            #first-text{
+               width: 100%;
+               text-align: left;
+               margin-bottom: 20px;
+            }
+            #footer-info>:nth-child(1) p{
+                display: none;
+            }
+            #footer-info>:nth-child(1)
+            {
+                display: block;
+                width: 100%;
+                height: 5px;
+                margin-bottom: 44px;
+            }
+            #footer-info>:nth-child(2) p{
+                display: none;
+            }
+            #footer-info>:nth-child(2)
+            {
+                display: block;
+                width: 100%;
+                height: 5px;
+                margin-bottom: 44px;
+            }
+            #footer-info>:nth-child(3)
+            {
+                display: block;
+                width: 100%;
+                height: 185px;
+                margin-bottom: 44px;
+            }
+            #footer-info>:nth-child(4) span{
+            display: none;
+            }
+            #phone{
+                display: none;
+            }
+            #email{
+                display: none;
+            }
+            #last-text{
+                display: block !important;
+            }
+            #rights{
+                text-align: left !important;
+            }
+    }
+    </style>
+</head>
+<body>
+    <div id="footer">
+        <div id="first-text">
+            <h3>Need help? Call our support team at +91 9810245261</h3>
+        </div>
+        <div id="footer-info">
+        <div>
+            <h4>INFORMATION</h4>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Contact Us</a></p>
+            <p><a href="#">Return Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Careers At Hok</a></p>
+            <p><a href="#">Frequently Ask Questions</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Shipping Policy</a></p>
+            <p><a href="#">Offers</a></p>
+            
+        </div>
+        <div>
+            <h4>OUR TOP CATEGORIES</h4>
+            <p><a href="#">Eyes</a></p>
+            <p><a href="#">Face</a></p>
+            <p><a href="#">Brushes</a></p>
+            <p><a href="#">Kits</a></p>
+            <p><a href="#">Lips</a></p>
+            <p><a href="#">Nails</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+        </div>
+        <div>
+            <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+            <p>Get the latest updates on new products and upcoming sales</p>
+
+            <input type="email" placeholder="Email address">
+            <button>SUBSCRIBE</button>
+
+            <div id="icon">
+                <a id="facebookicon" href="#" class="list-group-item"><i class="fa fa-facebook"></i> </a>
+    <a id="twittericon" href="#" class="list-group-item"><i class="fa fa-twitter"></i></a>
+    <a id="instagramicon" href="#" class="list-group-item"><i class="fa fa-instagram"></i></a>
+               
+            </div>
+        </div>
+        <div style="vertical-align: top; ">
+            <h4>CONTACT</h4>
+            
+            <span><i style="font-size:24px" class="fa">&#xf041;</i></span>
+            <span id="location" >Hok Beauty Pvt Ltd.
+                A-26, Ground Floor, Naraina Industrial Area Phase 2 New Delhi-110028</span>
+
+        <div id="phone">
+            
+            <span><i style="font-size:24px" class="fa">&#xf095;</i></span>
+            <div style="display: inline-block;font-size: 14px;margin-bottom: 35px;">+91 9810245261
+<br>
+                Mon-Sat 10 AM to 7 PM</div>
+        </div>  
+
+        <div id="email" style="vertical-align: top; ">
+            <span style="font-weight: bold;">&#64;</span>
+            <div style="display: inline-block;font-size: 14px;">Email:<br>support@hokmakeup.com</div>
+        </div>
+            </div>
+            <div id="last-text" style="font-size: 14px;box-sizing: border-box;font-style: italic;">
+                HOK MAKEUP is the easiest way to buy international makeup brands in India. 100%<br> genuine products sourced directly from the brands.
+            </div>
+        </div>
+
+
+        </div>
+        
+    </div>
+    <div id="rights">
+        All rights reserved © 2018 Hok Beauty Pvt. Ltd.
+    </div>
+    
+</body>
+</html>
