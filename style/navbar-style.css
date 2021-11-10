@@ -7,6 +7,10 @@
     list-style: none;
     text-decoration: none;
 }
+*:focus {
+  outline: none;
+}
+
 .topNav{
     font-size: 14px;
     display:flex;
@@ -489,7 +493,6 @@ input:focus{
   display:flex;
   position: absolute;
   left: 0;
-
 }
 .brand-box>div{
   display:flex;
