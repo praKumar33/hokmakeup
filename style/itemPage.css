@@ -1,0 +1,21 @@
+.mainItem{
+    width: 1170px;
+    margin: auto;
+    display:flex;
+    margin-top: 30px;
+ 
+}
+.left-img{
+    border:1px solid black;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.left-img img{
+    width:100%;
+} 
+.right-txt{
+    padding:20px;
+    border:1px solid red;
+    width: 80%;
+}
