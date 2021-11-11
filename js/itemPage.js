@@ -1,20 +1,7 @@
-var data = [
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/Wet-N-Wild-Silk-Finish-Lipstick-WhatS-Up-Doc_b219bc9c-38bb-4756-82fd-dcc75c8593c6_1024x1024.jpg?v=1615547171",
-    off: "10",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "4",
-    review: "80",
-    cutPrice: "599",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-];
+var data = JSON.parse(localStorage.getItem("item"));
 var container = document.querySelector(".product-display");
-
 var item = data[0];
-
+document.querySelector("#nav-name").textContent = item.name;
 var mainItem = document.createElement("div");
 mainItem.classList.add("mainItem");
 var imgDiv = document.createElement("div");
@@ -23,8 +10,8 @@ img.setAttribute("src", item.img);
 imgDiv.classList.add("left-img");
 imgDiv.append(img);
 var off = document.createElement("span");
-off.textContent = `${item.off}`
-off.classList.add("item-off")
+off.textContent = `${item.off}`;
+off.classList.add("item-off");
 var txtDiv = document.createElement("div");
 txtDiv.classList.add("right-txt");
 var itemName = document.createElement("h2");
@@ -63,7 +50,11 @@ price.classList.add("item-price");
 price.innerHTML = `<p><span>₹${item.cutPrice} </span> ₹${item.price}</p>`;
 var counterDiv = document.createElement("div");
 counterDiv.classList.add("item-counter");
-
+var checkout = document.createElement("div");
+checkout.classList.add("item-checkout");
+checkout.innerHTML = `<button class="item-to-crat">ADD TO CART</button>
+<button class="item-to-wish">ADD TO WISH LIST</button>
+<button class="item-buy">BUY IT NOW</button>`;
 var subTotal = document.createElement("h4");
 
 function incCount() {
@@ -82,8 +73,72 @@ function displayDom(itemName, ratingDiv, brand, price, counterDiv, subTotal) {
   counterDiv.innerHTML = `<span onclick="decCount()"><i class="fas fa-chevron-down" ></i></span>
 <input type="number" id="counter-dis" value=${counter}>
 <span onclick="incCount()"><i class="fas fa-chevron-up" ></i></span>`;
-  txtDiv.append(itemName, ratingDiv, brand, price, counterDiv, subTotal);
+
+  txtDiv.append(
+    itemName,
+    ratingDiv,
+    brand,
+    price,
+    counterDiv,
+    subTotal,
+    checkout
+  );
 
   mainItem.append(imgDiv, txtDiv);
   container.append(mainItem);
 }
+//////////////////////////////////////////////////
+// discription
+var discription = document.querySelector(".discription");
+var about = document.querySelector(".about-brand");
+var howTo = document.querySelector(".how-use");
+var ingredients = document.querySelector(".ingredients");
+var discriptionC = document.querySelector(".discription-c");
+var aboutC = document.querySelector(".about-c");
+var howToC = document.querySelector(".how-c");
+var ingredientsC = document.querySelector(".ingredients-c");
+
+discription.addEventListener("click", function () {
+  discription.classList.add("name-active");
+  about.classList.remove("name-active");
+  howTo.classList.remove("name-active");
+  ingredients.classList.remove("name-active");
+  ////////////////////////
+  discriptionC.classList.add("disc-active");
+  aboutC.classList.remove("disc-active");
+  howToC.classList.remove("disc-active");
+  ingredientsC.classList.remove("disc-active");
+});
+about.addEventListener("click", function () {
+  discription.classList.remove("name-active");
+  about.classList.add("name-active");
+  howTo.classList.remove("name-active");
+  ingredients.classList.remove("name-active");
+  ////////////////////////
+  discriptionC.classList.remove("disc-active");
+  aboutC.classList.add("disc-active");
+  howToC.classList.remove("disc-active");
+  ingredientsC.classList.remove("disc-active");
+});
+howTo.addEventListener("click", function () {
+  discription.classList.remove("name-active");
+  about.classList.remove("name-active");
+  howTo.classList.add("name-active");
+  ingredients.classList.remove("name-active");
+  ////////////////////////
+  discriptionC.classList.remove("disc-active");
+  aboutC.classList.remove("disc-active");
+  howToC.classList.add("disc-active");
+  ingredientsC.classList.remove("disc-active");
+});
+ingredients.addEventListener("click", function () {
+  discription.classList.remove("name-active");
+  about.classList.remove("name-active");
+  howTo.classList.remove("name-active");
+  ingredients.classList.add("name-active");
+  ////////////////////////
+  discriptionC.classList.remove("disc-active");
+  aboutC.classList.remove("disc-active");
+  howToC.classList.remove("disc-active");
+  ingredientsC.classList.add("disc-active");
+});

@@ -128,8 +128,8 @@ var dummyData = [
   },
 ];
 //////////////////////////
-localStorage.setItem("data",JSON.stringify(dummyData))
-var data = JSON.parse(localStorage.getItem("data"))
+localStorage.setItem("data", JSON.stringify(dummyData));
+var data = JSON.parse(localStorage.getItem("data"));
 displayItem(data);
 ///////////////////////////
 // filters
@@ -242,6 +242,9 @@ function displayItem(dat) {
     var btn = document.createElement("button");
     btn.classList.add("select-option");
     btn.textContent = "SELECT OPTIONS";
+    btn.addEventListener("click", function () {
+      goToProduct(item);
+    });
     var btn2 = document.createElement("button");
     btn2.classList.add("wish-list");
     btn2.textContent = "Add to Wish List";
@@ -318,3 +321,10 @@ bar3.addEventListener("click", function () {
     wish[i].classList.remove("wish-list-view1");
   }
 });
+
+function goToProduct(item) {
+  var arr = [];
+  arr.push(item);
+  localStorage.setItem("item", JSON.stringify(arr));
+  location.href = "itemPage.html";
+}
