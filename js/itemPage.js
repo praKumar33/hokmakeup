@@ -1,14 +1,32 @@
 var data = JSON.parse(localStorage.getItem("item"));
+
 var container = document.querySelector(".product-display");
 var item = data[0];
+var imgArr = item.img2;
+imgArr.unshift(item.img);
+///////////
 document.querySelector("#nav-name").textContent = item.name;
 var mainItem = document.createElement("div");
 mainItem.classList.add("mainItem");
+////////////////////////
 var imgDiv = document.createElement("div");
 var img = document.createElement("img");
 img.setAttribute("src", item.img);
 imgDiv.classList.add("left-img");
-imgDiv.append(img);
+var imgSlide = document.createElement("div");
+imgArr.map(function (im) {
+  var img2 = document.createElement("img")
+  img2.setAttribute("src",im)
+  img2.addEventListener("click", function () {
+    img.setAttribute("src",im)
+  })
+  img2.addEventListener("mouseenter", function () {
+    img.setAttribute("src",im)
+  })
+  imgSlide.append(img2)
+});
+imgDiv.append(imgSlide,img);
+/////////////////////////
 var off = document.createElement("span");
 off.textContent = `${item.off}`;
 off.classList.add("item-off");
@@ -148,3 +166,87 @@ document.querySelector(".item-to-wish").addEventListener("click", function () {
   wish.push(item);
   localStorage.setItem("wish", JSON.stringify(wish));
 });
+///////////////////////////////////////
+var data = JSON.parse(localStorage.getItem("data"));
+var prData = [];
+for (var i = 0; i < 20; i++) {
+  prData.push(data[i]);
+}
+displayItem(prData);
+function displayItem(dat) {
+  document.querySelector(".related-product").textContent = "";
+  dat.map(function (item, i) {
+    var box = document.querySelector(".related-product");
+    var prod = document.createElement("div");
+    prod.classList.add("prod");
+    var img = document.createElement("img");
+    img.classList.add("thumnail-img");
+    img.setAttribute("src", item.img);
+    var off = document.createElement("span");
+    off.classList.add("off");
+    var wish = document.createElement("span");
+    wish.classList.add("wish");
+    wish.classList.add("wish-block");
+    wish.innerHTML = `<i class="far fa-heart"></i>`;
+    wish.addEventListener("click", function () {
+      wishArr.push(item);
+      wish.classList.toggle("wish-red");
+      localStorage.setItem("wish", JSON.stringify(wishArr));
+    });
+    off.textContent = `${item.off}% OFF`;
+    var imgDiv = document.createElement("div");
+    imgDiv.classList.add("pr-img");
+    imgDiv.append(img, off, wish);
+    img;
+    ////////////
+    var brand = document.createElement("h3");
+    brand.textContent = item.brand;
+    var textDiv = document.createElement("div");
+    textDiv.classList.add("text-div");
+    var h1 = document.createElement("h1");
+    h1.textContent = item.name;
+    var stars = document.createElement("div");
+    stars.classList.add("product-star");
+    var star = [];
+    var str = "";
+    for (var i = 1; i <= 5; i++) {
+      if (i <= Math.floor(item.rating)) {
+        star.push(`<i class="fas fa-star"></i>`);
+      } else {
+        star.push(`<i class="far fa-star"></i>`);
+      }
+    }
+    var str1 = document.createElement("span");
+    str1.innerHTML = star[0];
+    var str2 = document.createElement("span");
+    str2.innerHTML = star[1];
+    var str3 = document.createElement("span");
+    str3.innerHTML = star[2];
+    var str4 = document.createElement("span");
+    str4.innerHTML = star[3];
+    var str5 = document.createElement("span");
+    str5.innerHTML = star[4];
+    var review = document.createElement("span");
+    review.classList.add("product-review");
+    review.textContent = `${item.review} reviews`;
+    stars.append(str1, str2, str3, str4, str5, review);
+    var price = document.createElement("p");
+    price.innerHTML = `<span class="cut-price">₹${item.cutPrice}</span> <span class="price">${item.price}</span>`;
+    var btn = document.createElement("button");
+    btn.classList.add("select-option");
+    btn.textContent = "SELECT OPTIONS";
+    btn.addEventListener("click", function () {
+      goToProduct(item);
+    });
+    /////////
+    textDiv.append(brand, h1, stars, price, btn);
+    prod.append(imgDiv, textDiv);
+    box.append(prod);
+  });
+}
+function goToProduct(item) {
+  var arr = [];
+  arr.push(item);
+  localStorage.setItem("item", JSON.stringify(arr));
+  location.href = "itemPage.html";
+}

@@ -152,5 +152,123 @@ input::-webkit-inner-spin-button {
  display:block;
 }
 .disc-content{
-   height:200px;
+    padding-left: 5px;
+   min-height:200px;
 }
+/* ////////////////////////// */
+.related-product{
+    width: 1170px;
+    margin: auto;
+    margin-top: 20px;
+    min-height: 500px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5,1fr);
+}
+.main-product-sec{
+    min-height:100vh;
+  }
+  .pr-img{
+    width:220px;
+    position:relative;
+    cursor: pointer;
+  }
+  .off{
+    position:absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    font-size:12px;
+    border-radius: 2px;
+    padding:0 7px;
+    background-color: #ff66b9;
+  }
+  .wish{
+    position:absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size:17px;
+    border-radius: 2px;
+    padding:0 7px;
+   color: rgb(54, 54, 54);
+  }
+  .wish-block{
+    display: none;
+  }
+  .wish-red{
+    color: red;
+  }
+  .products-sec h1{
+    font-size: 12px;
+    color: #141414;
+  }
+  .products-sec h3{
+    font-size: 14px;
+    color: #4d4d4d;
+  }
+  .cut-price{
+    text-decoration: line-through;
+    font-weight: bold;
+    color: #8f8f8f;
+  }
+  .price{
+    font-weight: bold;
+    color: #ff66b9;
+  }
+  .select-option{
+    width: 95%;
+    font-weight: 500;
+    color: #ff66b9;
+    border-radius: 2px;
+    font-size: 16px;
+    padding:10px 0;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: transparent;
+    border:1px solid rgb(117, 117, 117);
+  
+  }
+  .wish-list{
+    display: none;
+  }
+  .text-div{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 45%;
+   
+  }
+  .text-div h1,.text-div h3,.text-div p{
+    margin-top: 15px;
+  }
+  .text-div h3{
+      font-size: 14px;
+  }
+  .text-div h1{
+      font-weight: 300;
+      font-size:15px;
+    min-height: 56px;
+  }
+  .product-star{
+      margin-top: 20px;
+    font-size: 13px;
+  
+  }
+  .product-star i{
+    color:#fbcd0a;
+  }
+  .prod{
+    margin-top: 30px;
+  }
+  .prod img{
+    width: 100%;
+  }
+  .disc{
+    display:none
+  }
+  .related-h1{
+     text-align: center;
+     text-decoration: underline;
+     font-weight: 300;
+  }

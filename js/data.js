@@ -196,7 +196,7 @@ var makeup = [
     cat: "kits",
     subCat: "palettes",
     brand: "Revolution Beauty",
-    name: "Makeup Revolution Reloaded Eyeshadow Palette Marvellous Mattes + Newtrals 2",
+    name: "Makeup Revolution Reloaded Eyeshadow Palette Marvellous",
     rating: "4.5",
     review: "2",
     cutPrice: "1900",
