@@ -55,3 +55,12 @@ table {
     border-color: #383e47;
     background-color: #383e47;
  }
+ @media only screen and (max-width: 1200px) {
+    .wish-container{
+        width:100%;
+        overflow-y: scroll;
+    }
+    .small-nav{
+        display:none;
+    }
+ }

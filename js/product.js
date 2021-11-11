@@ -73,3 +73,8 @@ document.querySelector(".login-btn").addEventListener("click", function () {
 document.querySelector(".remove-log").addEventListener("click", function () {
   document.querySelector(".login-window").classList.add("login-window-block");
 });
+cartCountDisplay();
+function cartCountDisplay() {
+  document.querySelector(".cartCount").textContent =
+    JSON.parse(localStorage.getItem("cartCount")) || 0;
+}
