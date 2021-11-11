@@ -142,3 +142,9 @@ ingredients.addEventListener("click", function () {
   howToC.classList.remove("disc-active");
   ingredientsC.classList.add("disc-active");
 });
+
+document.querySelector(".item-to-wish").addEventListener("click", function () {
+  var wish = JSON.parse(localStorage.getItem("wish"));
+  wish.push(item);
+  localStorage.setItem("wish", JSON.stringify(wish));
+});

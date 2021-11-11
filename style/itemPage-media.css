@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1200px) {
+    body{
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .product-display{
+        width: 100%;
+    }
+    .mainItem{
+        flex-direction: column;
+        width: 100%;
+        justify-content:center;
+        align-items: center;
+    }
+    .right-txt{
+        width:80%;
+        align-items: center;
+    }
+    .discription-sec{
+        width: 100%;
+    }
+    .left-img{
+        align-items: flex-start;
+        justify-content:flex-start;
+        width: 70%;
+    }
+    .left-img img{
+        width:100%;
+    } 
+}
