@@ -1,134 +1,4 @@
-var dummyData = [
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/Wet-N-Wild-Silk-Finish-Lipstick-Pink-Ice_8eab4628-e702-4767-add5-5de8c695612b_270x270.jpg?v=1615547171",
-    off: "10",
-    cat: "eyes",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Silk Finish Lipstick",
-    rating: "3",
-    review: "61",
-    cutPrice: "195",
-    price: 123,
-    disc: "Wet N Wild's li pstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/GC964_prod_img_1024x1024_b1c6fca1-4d87-45d6-a3b1-d0c2f6688594_270x270.jpg?v=1630140295",
-    off: "25",
-    cat: "face",
-    brand: "L.A. Girl",
-    name: "LA Girl Pro Conceal HD",
-    rating: "5",
-    review: "121",
-    cutPrice: "695",
-    price: 521,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/77802537539_270x270.jpg?v=1615547671",
-    off: "10",
-    cat: "brushes",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Photo Focus Foundation",
-    rating: "3",
-    review: "74",
-    cutPrice: "699",
-    price: 629,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
-    off: "10",
-    cat: "kits",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "2",
-    review: "80",
-    cutPrice: "599",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
-    off: "10",
-    cat: "lips",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "3.4",
-    review: "80",
-    cutPrice: "599",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
-    off: "10",
-    cat: "nails",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "5",
-    review: "80",
-    cutPrice: "599",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
-    off: "10",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "4",
-    review: "80",
-    cutPrice: "599",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
-    off: "10",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "2",
-    review: "80",
-    cutPrice: "59",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
-    off: "10",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "1",
-    review: "80",
-    cutPrice: "599",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
-    off: "10",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "4",
-    review: "80",
-    cutPrice: "599",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-  {
-    img: "https://cdn.shopify.com/s/files/1/1743/7443/products/1_19ae3dcc-01c1-4482-9630-8a72e1f538a7_270x270.jpg?v=1621436676",
-    off: "10",
-    brand: "Wet N Wild",
-    name: "Wet N Wild Megalast Liquid Catsuit Matte Lipstick",
-    rating: "4",
-    review: "80",
-    cutPrice: "599",
-    price: 539,
-    disc: "Wet N Wild's lipstick formula contains all the same things as the other guys: rich color, vitamins A & E, aloe vera, and really feels like putting silk on your lips. If you're already thinking That is a crazy bargain, we've now added macadamia nut oil that contains antioxidants to hydrate your lips for a smooth, supple pout. Are we just crazy? Have we gone too far? Or do you deserve it? We definitely think so! One try, and we guarantee you will declare this your best lipstick brand of life.",
-  },
-];
 //////////////////////////
-localStorage.setItem("data", JSON.stringify(dummyData));
 var data = JSON.parse(localStorage.getItem("data"));
 displayItem(data);
 ///////////////////////////
@@ -212,10 +82,12 @@ function sortProducts() {
     arr = data.sort(function (a, b) {
       return b.rating - a.rating;
     });
+  } else if (value == "all") {
+    arr = data;
   }
   displayItem(arr);
 }
-
+var wishArr = JSON.parse(localStorage.getItem("wish")) || [];
 function displayItem(dat) {
   document.querySelector(".products-sec").textContent = "";
   dat.map(function (item, i) {
@@ -226,10 +98,20 @@ function displayItem(dat) {
     img.setAttribute("src", item.img);
     var off = document.createElement("span");
     off.classList.add("off");
+    var wish = document.createElement("span");
+    wish.classList.add("wish");
+    wish.classList.add("wish-block");
+    wish.innerHTML = `<i class="far fa-heart"></i>`;
+    wish.addEventListener("click", function () {
+      wishArr.push(item);
+      wish.classList.toggle("wish-red");
+      localStorage.setItem("wish", JSON.stringify(wishArr));
+    });
     off.textContent = `${item.off}% OFF`;
     var imgDiv = document.createElement("div");
     imgDiv.classList.add("pr-img");
-    imgDiv.append(img, off);
+    imgDiv.append(img, off, wish);
+    img;
     ////////////
     var brand = document.createElement("h3");
     brand.textContent = item.brand;
@@ -266,6 +148,21 @@ function displayItem(dat) {
   });
 }
 
+/////////////////////////
+// wish list toggle
+var imgDiv = document.querySelectorAll(".pr-img");
+var wish = document.querySelectorAll(".wish");
+imgDiv.forEach(function (img, i) {
+  img.addEventListener("mouseenter", function () {
+    wish[i].classList.remove("wish-block");
+  });
+  img.addEventListener("mouseleave", function () {
+    wish[i].classList.add("wish-block");
+  });
+});
+
+// document.querySelector(".pr-img").addEventListener("mouseleave", function () {
+//   document.querySelector(".wish").classList.add("wish-block");
 /////////////////////////
 // bars
 var bar1 = document.querySelector(".b1");

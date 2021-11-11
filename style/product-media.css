@@ -167,8 +167,11 @@
         margin-right: 0;
     }
     .products-sec{
-        grid-template-columns:1fr;
-        padding: 0 20px;
+        place-content: center;
+        grid-template-columns:100%;
+    }
+    .mainNav-content{
+        width:100%;
     }
     .disc{
         display:block;

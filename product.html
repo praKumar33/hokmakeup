@@ -253,6 +253,11 @@
                             Wet N Wild
                         </div>
                         <div class="filter-list">
+                            <input type="checkbox" class="fils" onclick="fil()" id="eyes"
+                                value="brand>Revolution Beauty">
+                            Revolution Beauty
+                        </div>
+                        <div class="filter-list">
                             <input type="checkbox" class="fils" onclick="fil()" id="face" value="brand>Hok Makeup">
                             Hok Makeup
                         </div>
@@ -261,13 +266,10 @@
                             L.A. Girl
                         </div>
                         <div class="filter-list">
-                            <input type="checkbox" class="fils" onclick="fil()" id="eyes" value="brand>Impress">
-                            Impress
+                            <input type="checkbox" class="fils" onclick="fil()" id="eyes" value="brand>Revolution Pro">
+                            Revolution Pro
                         </div>
-                        <div class="filter-list">
-                            <input type="checkbox" class="fils" onclick="fil()" id="eyes" value="brand>Pigment Play">
-                            Pigment Play
-                        </div>
+
                     </div>
                 </div>
                 <div class="filters">
@@ -390,7 +392,7 @@
                         <p class="sort-by">SORT BY</p>
                         <div class="sort-box">
                             <select id="sortProducts" onchange="sortProducts()">
-                                <option value="">Featured</option>
+                                <option value="all">Featured</option>
                                 <option value="best">Best Selling</option>
                                 <option value="low">Price, low to high</option>
                                 <option value="high">Price, high to low</option>
@@ -492,3 +494,4 @@
 </html>
 <script src="js/product.js"></script>
 <script src="js/product-items.js"></script>
+<script src="js/data.js"></script>

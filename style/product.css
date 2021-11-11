@@ -611,6 +611,7 @@ input:focus{
 .pr-img{
   width:220px;
   position:relative;
+  cursor: pointer;
 }
 .off{
   position:absolute;
@@ -621,6 +622,22 @@ input:focus{
   border-radius: 2px;
   padding:0 7px;
   background-color: #ff66b9;
+}
+.wish{
+  position:absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  font-size:17px;
+  border-radius: 2px;
+  padding:0 7px;
+ color: rgb(54, 54, 54);
+}
+.wish-block{
+  display: none;
+}
+.wish-red{
+  color: red;
 }
 .products-sec h1{
   font-size: 12px;
@@ -664,6 +681,9 @@ input:focus{
 }
 .prod{
   margin-top: 30px;
+}
+.prod img{
+  width: 100%;
 }
 .disc{
   display:none
