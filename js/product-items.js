@@ -95,6 +95,7 @@ function displayItem(dat) {
     var prod = document.createElement("div");
     prod.classList.add("prod");
     var img = document.createElement("img");
+    img.classList.add("thumnail-img");
     img.setAttribute("src", item.img);
     var off = document.createElement("span");
     off.classList.add("off");
@@ -119,6 +120,31 @@ function displayItem(dat) {
     textDiv.classList.add("text-div");
     var h1 = document.createElement("h1");
     h1.textContent = item.name;
+    var stars = document.createElement("div");
+    stars.classList.add("product-star")
+    var star = [];
+    var str = "";
+    for (var i = 1; i <= 5; i++) {
+      if (i <= Math.floor(item.rating)) {
+        star.push(`<i class="fas fa-star"></i>`);
+      } else {
+        star.push(`<i class="far fa-star"></i>`);
+      }
+    }
+    var str1 = document.createElement("span");
+    str1.innerHTML = star[0];
+    var str2 = document.createElement("span");
+    str2.innerHTML = star[1];
+    var str3 = document.createElement("span");
+    str3.innerHTML = star[2];
+    var str4 = document.createElement("span");
+    str4.innerHTML = star[3];
+    var str5 = document.createElement("span");
+    str5.innerHTML = star[4];
+    var review = document.createElement("span");
+    review.classList.add("product-review");
+    review.textContent = `${item.review} reviews`;
+    stars.append(str1, str2, str3, str4, str5, review);
     var price = document.createElement("p");
     price.innerHTML = `<span class="cut-price">₹${item.cutPrice}</span> <span class="price">${item.price}</span>`;
     var btn = document.createElement("button");
@@ -142,7 +168,7 @@ function displayItem(dat) {
     disc.innerHTML = d;
     disc.classList.add("disc");
     /////////
-    textDiv.append(brand, h1, price, disc, btn, btn2);
+    textDiv.append(brand, h1, stars, price, disc, btn, btn2);
     prod.append(imgDiv, textDiv);
     box.append(prod);
   });
@@ -152,12 +178,15 @@ function displayItem(dat) {
 // wish list toggle
 var imgDiv = document.querySelectorAll(".pr-img");
 var wish = document.querySelectorAll(".wish");
+var image = document.querySelectorAll(".thumnail-img");
 imgDiv.forEach(function (img, i) {
   img.addEventListener("mouseenter", function () {
     wish[i].classList.remove("wish-block");
+    image[i].setAttribute("src", data[i].img2[0]);
   });
   img.addEventListener("mouseleave", function () {
     wish[i].classList.add("wish-block");
+    image[i].setAttribute("src", data[i].img);
   });
 });
 

@@ -99,3 +99,6 @@ h2{
 .foot5 div{
     margin-top: 25px;
 }
+.icon{
+    cursor: pointer;
+}

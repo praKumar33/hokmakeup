@@ -679,6 +679,16 @@ input:focus{
 .text-div h1,.text-div h3,.text-div p{
   margin-top: 15px;
 }
+.text-div h1{
+  min-height: 56px;
+}
+.product-star{
+  font-size: 13px;
+
+}
+.product-star i{
+  color:#fbcd0a;
+}
 .prod{
   margin-top: 30px;
 }

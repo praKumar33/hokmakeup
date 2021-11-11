@@ -158,3 +158,8 @@ rightArrow.addEventListener("click", function () {
     brandSlide.style.left = `${counter}%`;
   }
 });
+cartCountDisplay();
+function cartCountDisplay() {
+  document.querySelector(".cartCount").textContent =
+    JSON.parse(localStorage.getItem("cartCount")) || 0;
+}

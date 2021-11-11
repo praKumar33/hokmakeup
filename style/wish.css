@@ -1,0 +1,57 @@
+.wish-container{
+    width: 1170px;
+    margin: auto;
+}
+.small-nav{
+    width: 1170px;
+    margin: auto;
+}
+td{
+    text-align: center;
+    min-width: 150px
+}
+td img{
+    width: 100px;
+}
+td>button{
+    width:100%;
+    height:42px;
+    border:1px solid rgb(190, 190, 190);
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    transition:background 0.3s ease;
+   
+}
+table {
+    margin-left: -20px;
+    border-collapse: separate;   
+    border-spacing: 40px 10px;
+ }
+ .wish-td2{
+ text-align: left;
+ width: 400px;
+ }
+ td>p{
+     font-weight: bold;
+ }
+ td>span{
+     display:block;
+     font-size:12px;
+     color: rgb(116, 116, 116);
+ }
+ .wish-td4 button{
+    background-color:#fff;
+ }
+ 
+ .wish-td4 button:hover{
+    color: #ea3469;
+    border-color: #383e47;
+    background-color: #383e47;
+ }
+ 
+ .wish-td5 button{
+    color: #ea3469;
+    border-color: #383e47;
+    background-color: #383e47;
+ }
