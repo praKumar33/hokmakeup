@@ -272,3 +272,15 @@ input::-webkit-inner-spin-button {
      text-decoration: underline;
      font-weight: 300;
   }
+  .active-img{
+      min-width: 400px;
+  }
+  .left-img{
+      position: relative;
+  }
+  .side-imgs{
+      position:absolute;
+      top: 0;
+      left: -10%;
+      width: 80px;
+  }

@@ -11,21 +11,23 @@ mainItem.classList.add("mainItem");
 ////////////////////////
 var imgDiv = document.createElement("div");
 var img = document.createElement("img");
+img.classList.add("active-img");
 img.setAttribute("src", item.img);
 imgDiv.classList.add("left-img");
 var imgSlide = document.createElement("div");
+imgSlide.classList.add("side-imgs")
 imgArr.map(function (im) {
-  var img2 = document.createElement("img")
-  img2.setAttribute("src",im)
+  var img2 = document.createElement("img");
+  img2.setAttribute("src", im);
   img2.addEventListener("click", function () {
-    img.setAttribute("src",im)
-  })
+    img.setAttribute("src", im);
+  });
   img2.addEventListener("mouseenter", function () {
-    img.setAttribute("src",im)
-  })
-  imgSlide.append(img2)
+    img.setAttribute("src", im);
+  });
+  imgSlide.append(img2);
 });
-imgDiv.append(imgSlide,img);
+imgDiv.append(imgSlide, img);
 /////////////////////////
 var off = document.createElement("span");
 off.textContent = `${item.off}`;
