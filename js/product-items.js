@@ -3,6 +3,12 @@ var data = JSON.parse(localStorage.getItem("data"));
 displayItem(data);
 ///////////////////////////
 // filters
+// for catagory pages
+/////////////////////////
+document.querySelector(".ch-v").checked = true;
+fil();
+////////////////////////////////
+///////////////
 var fillArr = [];
 function fil() {
   fillArr = [];
@@ -121,7 +127,7 @@ function displayItem(dat) {
     var h1 = document.createElement("h1");
     h1.textContent = item.name;
     var stars = document.createElement("div");
-    stars.classList.add("product-star")
+    stars.classList.add("product-star");
     var star = [];
     var str = "";
     for (var i = 1; i <= 5; i++) {
