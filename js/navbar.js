@@ -218,3 +218,44 @@ document
   .addEventListener("mouseleave", function () {
     document.querySelector(".skin-hover").classList.add("skin-hover-block");
   });
+////////////////////
+document
+  .querySelector(".tutorials-link")
+  .addEventListener("mouseenter", function () {
+    document.querySelector(".tut-hover").classList.remove("tut-hover-block");
+  });
+document
+  .querySelector(".tutorials-link")
+  .addEventListener("mouseleave", function () {
+    document.querySelector(".tut-hover").classList.add("tut-hover-block");
+  });
+document
+  .querySelector(".tut-hover")
+  .addEventListener("mouseenter", function () {
+    document.querySelector(".tut-hover").classList.remove("tut-hover-block");
+  });
+document
+  .querySelector(".tut-hover")
+  .addEventListener("mouseleave", function () {
+    document.querySelector(".tut-hover").classList.add("tut-hover-block");
+  });
+document
+  .querySelector(".kits-link")
+  .addEventListener("mouseenter", function () {
+    document.querySelector(".kit-hover").classList.remove("kit-hover-block");
+  });
+document
+  .querySelector(".kits-link")
+  .addEventListener("mouseleave", function () {
+    document.querySelector(".kit-hover").classList.add("kit-hover-block");
+  });
+document
+  .querySelector(".kit-hover")
+  .addEventListener("mouseenter", function () {
+    document.querySelector(".kit-hover").classList.remove("kit-hover-block");
+  });
+document
+  .querySelector(".kit-hover")
+  .addEventListener("mouseleave", function () {
+    document.querySelector(".kit-hover").classList.add("kit-hover-block");
+  });

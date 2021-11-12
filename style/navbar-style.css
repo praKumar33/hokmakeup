@@ -604,4 +604,32 @@ justify-content: center;
      border:0;
      width:0;
  }
- 
+ /* //////// */
+li .tut-hover, li .kit-hover{
+  margin-top: 10px;
+  margin-left: -10px;
+  padding-right: 20px;
+  padding-left: 10px;
+   background-color: #fff;
+   position:absolute;
+   z-index: 99;
+   height:140px;
+   overflow:hidden;
+   width: 200px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   transition: height 0.5s ease;
+ }
+ li .kit-hover{
+   height:170px;
+ }
+ li .tut-hover li, li .kit-hover li{
+   margin-top: 10px;
+ }
+ li .tut-hover li a,li .kit-hover li a{
+  color: #000000;
+  font-size: 14px;
+ }
+ li .tut-hover-block, li .kit-hover-block{
+height:0;
+border:0;
+ }

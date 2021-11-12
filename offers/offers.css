@@ -1,0 +1,28 @@
+.hedding{
+    text-align: center;
+   text-decoration: underline;
+   font-size: 20px;
+}
+.flex-images{
+    width: 1170px;
+    display: flex;
+    margin: auto;
+    padding:10px;
+    justify-content:space-between;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media only screen and (max-width: 1170px){
+    .flex-images{
+       width: 100%;
+    }
+    
+}
+@media only screen and (max-width: 1000px){
+    .flex-images{
+       flex-direction: column;
+    }
+    .flex-images img{
+        margin-bottom: 20px;
+     }
+}
