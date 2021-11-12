@@ -7,6 +7,9 @@
     list-style: none;
     text-decoration: none;
 }
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
 button{
   cursor: pointer;
 }
@@ -506,6 +509,9 @@ input:focus{
   box-sizing: initial;
   padding:8px;
   width: 150px;
+  position:relative;
+}
+.sort-box{
   position:relative;
 }
 .sort-box{

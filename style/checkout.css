@@ -1,0 +1,15 @@
+body{
+    height:100vh;
+    background-color:teal;
+}
+hr{
+    transform:rotateZ(90deg);
+}
+.left-sec{
+    border:1px solid red;
+}
+.container{
+    border:1px solid black;
+    height:90%;
+    width: 80%;
+}
