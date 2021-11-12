@@ -179,20 +179,24 @@ document.querySelector(".item-to-wish").addEventListener("click", function () {
     localStorage.setItem("wish", JSON.stringify(wishArr));
   }
 });
+var cartCount = JSON.parse(localStorage.getItem("cartCount")) || 0;
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 document.querySelector(".item-to-cart").addEventListener("click", function () {
   var total = +document.querySelector(".total-price").textContent.split("₹")[1];
   if (document.querySelector(".item-to-cart").textContent == "ADD TO CART") {
+    cartCount++;
     var cartItem = item;
     cartItem.price = total;
     cartArr.push(cartItem);
-   localStorage.setItem("cart", JSON.stringify(cartArr))
-   document.querySelector(".item-to-cart").textContent = "REMOVE FROM CART"
-  }else{
+    localStorage.setItem("cart", JSON.stringify(cartArr));
+    document.querySelector(".item-to-cart").textContent = "REMOVE FROM CART";
+  } else {
+    cartCount--;
     cartArr.pop();
-    localStorage.setItem("cart", JSON.stringify(cartArr))
-    document.querySelector(".item-to-cart").textContent = "ADD TO CART"
+    localStorage.setItem("cart", JSON.stringify(cartArr));
+    document.querySelector(".item-to-cart").textContent = "ADD TO CART";
   }
+  localStorage.setItem("cartCount", JSON.stringify(cartCount));
 });
 ///////////////////////////////////////
 var data = JSON.parse(localStorage.getItem("data"));
