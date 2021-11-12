@@ -3,10 +3,7 @@ var data = JSON.parse(localStorage.getItem("data"));
 displayItem(data);
 ///////////////////////////
 // filters
-// for catagory pages
-/////////////////////////
-document.querySelector(".ch-v").checked = true;
-fil();
+
 ////////////////////////////////
 ///////////////
 var fillArr = [];
@@ -162,6 +159,17 @@ function displayItem(dat) {
     var btn2 = document.createElement("button");
     btn2.classList.add("wish-list");
     btn2.textContent = "Add to Wish List";
+    btn2.addEventListener("click", function () {
+      if (btn2.textContent == "Add to Wish List") {
+        wishArr.push(item);
+        localStorage.setItem("wish", JSON.stringify(wishArr));
+        btn2.textContent = "Remove from Wish List";
+      } else {
+        btn2.textContent = "Add to Wish List";
+        wishArr.pop();
+        localStorage.setItem("wish", JSON.stringify(wishArr));
+      }
+    });
     var disc = document.createElement("div");
     var d = "";
     var dc = item.disc;

@@ -15,7 +15,7 @@ img.classList.add("active-img");
 img.setAttribute("src", item.img);
 imgDiv.classList.add("left-img");
 var imgSlide = document.createElement("div");
-imgSlide.classList.add("side-imgs")
+imgSlide.classList.add("side-imgs");
 imgArr.map(function (im) {
   var img2 = document.createElement("img");
   img2.setAttribute("src", im);
@@ -72,10 +72,11 @@ var counterDiv = document.createElement("div");
 counterDiv.classList.add("item-counter");
 var checkout = document.createElement("div");
 checkout.classList.add("item-checkout");
-checkout.innerHTML = `<button class="item-to-crat">ADD TO CART</button>
+checkout.innerHTML = `<button class="item-to-cart">ADD TO CART</button>
 <button class="item-to-wish">ADD TO WISH LIST</button>
 <button class="item-buy">BUY IT NOW</button>`;
 var subTotal = document.createElement("h4");
+subTotal.classList.add("total-price");
 
 function incCount() {
   counter++;
@@ -162,11 +163,36 @@ ingredients.addEventListener("click", function () {
   howToC.classList.remove("disc-active");
   ingredientsC.classList.add("disc-active");
 });
+var wishArr = JSON.parse(localStorage.getItem("wish")) || [];
 
 document.querySelector(".item-to-wish").addEventListener("click", function () {
-  var wish = JSON.parse(localStorage.getItem("wish"));
-  wish.push(item);
-  localStorage.setItem("wish", JSON.stringify(wish));
+  if (
+    document.querySelector(".item-to-wish").textContent == "ADD TO WISH LIST"
+  ) {
+    wishArr.push(item);
+    localStorage.setItem("wish", JSON.stringify(wishArr));
+    document.querySelector(".item-to-wish").textContent =
+      "REMOVE FROM WISH LIST";
+  } else {
+    document.querySelector(".item-to-wish").textContent = "ADD TO WISH LIST";
+    wishArr.pop();
+    localStorage.setItem("wish", JSON.stringify(wishArr));
+  }
+});
+var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+document.querySelector(".item-to-cart").addEventListener("click", function () {
+  var total = +document.querySelector(".total-price").textContent.split("₹")[1];
+  if (document.querySelector(".item-to-cart").textContent == "ADD TO CART") {
+    var cartItem = item;
+    cartItem.price = total;
+    cartArr.push(cartItem);
+   localStorage.setItem("cart", JSON.stringify(cartArr))
+   document.querySelector(".item-to-cart").textContent = "REMOVE FROM CART"
+  }else{
+    cartArr.pop();
+    localStorage.setItem("cart", JSON.stringify(cartArr))
+    document.querySelector(".item-to-cart").textContent = "ADD TO CART"
+  }
 });
 ///////////////////////////////////////
 var data = JSON.parse(localStorage.getItem("data"));

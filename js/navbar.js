@@ -208,3 +208,13 @@ document
   .addEventListener("mouseleave", function () {
     document.querySelector(".makeup-hover").classList.add("makeup-hover-block");
   });
+document
+  .querySelector(".skin-hover")
+  .addEventListener("mouseenter", function () {
+    document.querySelector(".skin-hover").classList.remove("skin-hover-block");
+  });
+document
+  .querySelector(".skin-hover")
+  .addEventListener("mouseleave", function () {
+    document.querySelector(".skin-hover").classList.add("skin-hover-block");
+  });
