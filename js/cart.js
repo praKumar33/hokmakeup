@@ -116,3 +116,8 @@ function updatePrice(count, i, price) {
   localStorage.setItem("cart", JSON.stringify(cart));
   location.reload();
 }
+function makeDelete(i) {
+  cart.splice(i, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload();
+}
