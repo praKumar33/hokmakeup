@@ -1,8 +1,8 @@
 var wish = JSON.parse(localStorage.getItem("wish"));
 var tbody = document.querySelector("tbody");
 var count = JSON.parse(localStorage.getItem("cartCount")) || 0;
-console.log(count);
 displayWish(wish);
+var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 function displayWish(wish) {
   tbody.innerHTML = "";
   wish.map(function (item, i) {
@@ -38,17 +38,29 @@ function displayWish(wish) {
     var cart = document.createElement("button");
     cart.textContent = "Add to cart";
     td5.append(cart);
+    td5.addEventListener("click", function () {
+      var cartCount = JSON.parse(localStorage.getItem("cartCount")) || 0;
+      if (cart.textContent == "Add to cart") {
+        cartCount++;
+        item.quantity = 1;
+        cartArr.push(item);
+        localStorage.setItem("cart", JSON.stringify(cartArr));
+        cart.textContent = "Remove from cart";
+        localStorage.setItem("cartCount", JSON.stringify(cartCount));
+      } else {
+        cartCount--;
+        cartArr.pop();
+        localStorage.setItem("cart", JSON.stringify(cartArr));
+        cart.textContent = "Add to cart";
+        localStorage.setItem("cartCount", JSON.stringify(cartCount));
+      }
+      document.querySelector(".cartCount").textContent =
+        JSON.parse(localStorage.getItem("cartCount")) || 0;
+    });
     ///////////////////
     var tr = document.createElement("tr");
     tr.append(td1, td2, td3, td4, td5);
     tbody.append(tr);
-
-    cart.addEventListener("click", function () {
-      count++;
-      localStorage.setItem("cartCount", count);
-      console.log(count);
-      cartCountDisplay();
-    });
   });
 }
 cartCountDisplay();
