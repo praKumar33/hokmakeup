@@ -1,3 +1,5 @@
+var arr = [];
+localStorage.setItem("cart", JSON.stringify(arr));
 var ham = document.querySelector(".hamburger");
 function stickyElement(e) {
   var mainNav = document.querySelector(".mainNav");
