@@ -259,3 +259,25 @@ document
   .addEventListener("mouseleave", function () {
     document.querySelector(".kit-hover").classList.add("kit-hover-block");
   });
+////////////////////////
+// login
+var email = document.querySelector("#email");
+var pass = document.querySelector("#password");
+var account = JSON.parse(localStorage.getItem("account"));
+document.querySelector(".login-ac").addEventListener("click", function () {
+  for (var i = 0; i < account.length; i++) {
+    if (account[i].mail == email.value && account[i].pass == pass.value) {
+      localStorage.setItem("log", true);
+      console.log("de");
+    }
+    checkLog();
+  }
+});
+checkLog();
+function checkLog() {
+  if (localStorage.getItem("log")) {
+    document.querySelector(".login-btn").style.display = "none";
+    document.querySelector(".create-btn").style.display = "none";
+    document.querySelector(".log-block").style.display = "none";
+  }
+}

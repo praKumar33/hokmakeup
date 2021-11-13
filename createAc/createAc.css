@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+   
+    height: 630px;
+    width: 50%;
+    font-family: Montserrat,sans-serif;
+    line-height: 280%;
+    padding-left: 10%;
+}
+.firstDiv{
+    font-size: 13px;
+    width: 28%;
+    
+}
+.ul{
+    display: flex;
+    justify-content: space-between;
+    
+}
+li{
+   list-style: none;
+}
+.secondDiv{
+    
+    background-color: rgb(247, 244, 244);
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    margin-left: 10px;
+    
+}
+input{
+    padding: 10px;
+    width: 85%;
+}
+label{
+    font-weight: bold;
+}
+#btn1{
+    padding: 10px;
+    width: auto;
+    background-color: black;
+    color: rgb(247, 54, 86);
+    margin-top: 20px;
+    height: auto;
+    font-size: large;
+}
+span{
+    color: red;
+    font-weight: normal;
+}
+#btn2{
+    width: 140px;
+    border-radius: 30px;
+    height: 60px;
+    color: white;
+    font-size: medium;
+    background-color: black;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 0px) and (max-width : 560px) {
+    .container{
+        width: 100%;
+    }
+    .firstDiv{
+        display: none;
+    }
+    #btn1{
+        font-size:smaller;
+        height: auto;
+        width: auto;
+    }
+    #btn2{
+        height: 30px;
+        width: 140px
+        
+    }
+}
+#btn1:hover{
+    cursor: pointer;
+}
+#btn2:hover{
+    cursor: pointer;
+}
