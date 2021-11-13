@@ -121,3 +121,11 @@ function makeDelete(i) {
   localStorage.setItem("cart", JSON.stringify(cart));
   location.reload();
 }
+checkLog();
+function checkLog() {
+  if (localStorage.getItem("log")) {
+    document.querySelector(".login-btn").style.display = "none";
+    document.querySelector(".create-btn").style.display = "none";
+    document.querySelector(".log-block").style.display = "none";
+  }
+}

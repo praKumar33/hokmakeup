@@ -84,3 +84,11 @@ document
   .addEventListener("mouseleave", function () {
     document.querySelector(".kit-hover").classList.add("kit-hover-block");
   });
+checkLog();
+function checkLog() {
+  if (localStorage.getItem("log")) {
+    document.querySelector(".login-btn").style.display = "none";
+    document.querySelector(".create-btn").style.display = "none";
+    document.querySelector(".log-block").style.display = "none";
+  }
+}
