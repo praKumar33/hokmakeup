@@ -1,5 +1,3 @@
-var arr = [];
-localStorage.setItem("cart", JSON.stringify(arr));
 var ham = document.querySelector(".hamburger");
 function stickyElement(e) {
   var mainNav = document.querySelector(".mainNav");
@@ -270,9 +268,13 @@ document.querySelector(".login-ac").addEventListener("click", function () {
   for (var i = 0; i < account.length; i++) {
     if (account[i].mail == email.value && account[i].pass == pass.value) {
       localStorage.setItem("log", true);
-      console.log("de");
     }
     checkLog();
+  }
+  if (!JSON.parse(localStorage.getItem("log"))) {
+    email.value = "";
+    pass.value = "";
+    alert("wrong details!");
   }
 });
 checkLog();
@@ -281,5 +283,6 @@ function checkLog() {
     document.querySelector(".login-btn").style.display = "none";
     document.querySelector(".create-btn").style.display = "none";
     document.querySelector(".log-block").style.display = "none";
+    document.querySelector(".login-window").style.display = "none";
   }
 }

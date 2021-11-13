@@ -184,3 +184,30 @@ function checkLog() {
     document.querySelector(".log-block").style.display = "none";
   }
 }
+////////////////////////
+// login
+var email = document.querySelector("#email");
+var pass = document.querySelector("#password");
+var account = JSON.parse(localStorage.getItem("account"));
+document.querySelector(".login-ac").addEventListener("click", function () {
+  for (var i = 0; i < account.length; i++) {
+    if (account[i].mail == email.value && account[i].pass == pass.value) {
+      localStorage.setItem("log", true);
+    }
+    checkLog();
+  }
+  if (!JSON.parse(localStorage.getItem("log"))) {
+    email.value = "";
+    pass.value = "";
+    alert("wrong details!");
+  }
+});
+checkLog();
+function checkLog() {
+  if (localStorage.getItem("log")) {
+    document.querySelector(".login-btn").style.display = "none";
+    document.querySelector(".create-btn").style.display = "none";
+    document.querySelector(".log-block").style.display = "none";
+    document.querySelector(".login-window").style.display = "none";
+  }
+}

@@ -1,6 +1,6 @@
 var wish = JSON.parse(localStorage.getItem("wish"));
 var tbody = document.querySelector("tbody");
-var count = JSON.parse(localStorage.getItem("cartCount")) || 0;
+var count = JSON.parse(localStorage.getItem("cart")).length || 0;
 displayWish(wish);
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 function displayWish(wish) {
@@ -46,16 +46,14 @@ function displayWish(wish) {
         cartArr.push(item);
         localStorage.setItem("cart", JSON.stringify(cartArr));
         cart.textContent = "Remove from cart";
-        localStorage.setItem("cartCount", JSON.stringify(cartCount));
       } else {
         cartCount--;
         cartArr.pop();
         localStorage.setItem("cart", JSON.stringify(cartArr));
         cart.textContent = "Add to cart";
-        localStorage.setItem("cartCount", JSON.stringify(cartCount));
       }
       document.querySelector(".cartCount").textContent =
-        JSON.parse(localStorage.getItem("cartCount")) || 0;
+        JSON.parse(localStorage.getItem("cart")).length || 0;
     });
     ///////////////////
     var tr = document.createElement("tr");

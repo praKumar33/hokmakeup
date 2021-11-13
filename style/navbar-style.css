@@ -251,6 +251,9 @@
 .disable{
 display:none;
 }
+.login-btn{
+  cursor: pointer;
+}
 .hamburger {
 
   cursor: pointer;

@@ -5,7 +5,6 @@ function cartCountDisplay() {
 }
 var cartItems = JSON.parse(localStorage.getItem("cart"));
 
-console.log(JSON.parse(localStorage.getItem("cart")).length);
 displayItems(cartItems);
 
 function displayItems(cartItems) {
@@ -102,10 +101,13 @@ function displayItems(cartItems) {
       updatePrice(counter, index, price);
     });
   });
-  var total = cartItems.reduce(function (a, b) {
-    return a + b.price;
-  }, 0);
-  document.querySelector("#ammount").textContent = total;
+  document.querySelector("#ammount").textContent = cartItems.reduce(function (
+    a,
+    b
+  ) {
+    return Number(a) + Number(b.price);
+  },
+  0);
 }
 var cart = JSON.parse(localStorage.getItem("cart"));
 function updatePrice(count, i, price) {
