@@ -289,3 +289,8 @@ function goToProduct(item) {
   localStorage.setItem("item", JSON.stringify(arr));
   location.href = "itemPage.html";
 }
+var cart = JSON.parse(localStorage.getItem("cart")) || [];
+document.querySelector(".item-buy").addEventListener("click", function () {
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+});
