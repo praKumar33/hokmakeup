@@ -1,5 +1,5 @@
 document.querySelector(".cartCount").textContent =
-  JSON.parse(localStorage.getItem("cartCount")) || 0;
+  JSON.parse(localStorage.getItem("cart")).length || 0;
 document
   .querySelector(".makeup-link")
   .addEventListener("mouseover", function () {

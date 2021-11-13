@@ -76,7 +76,7 @@ document.querySelector(".remove-log").addEventListener("click", function () {
 cartCountDisplay();
 function cartCountDisplay() {
   document.querySelector(".cartCount").textContent =
-    JSON.parse(localStorage.getItem("cartCount")) || 0;
+    JSON.parse(localStorage.getItem("cart")).length || 0;
 }
 //////////////////////////////
 // hover
@@ -176,11 +176,11 @@ document
   .addEventListener("mouseleave", function () {
     document.querySelector(".kit-hover").classList.add("kit-hover-block");
   });
-  checkLog();
-  function checkLog() {
-    if (localStorage.getItem("log")) {
-      document.querySelector(".login-btn").style.display = "none";
-      document.querySelector(".create-btn").style.display = "none";
-      document.querySelector(".log-block").style.display = "none";
-    }
+checkLog();
+function checkLog() {
+  if (localStorage.getItem("log")) {
+    document.querySelector(".login-btn").style.display = "none";
+    document.querySelector(".create-btn").style.display = "none";
+    document.querySelector(".log-block").style.display = "none";
   }
+}

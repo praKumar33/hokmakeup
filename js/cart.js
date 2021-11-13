@@ -1,10 +1,11 @@
 cartCountDisplay();
 function cartCountDisplay() {
   document.querySelector(".cartCount").textContent =
-    JSON.parse(localStorage.getItem("cartCount")) || 0;
+    JSON.parse(localStorage.getItem("cart")).length || 0;
 }
 var cartItems = JSON.parse(localStorage.getItem("cart"));
 
+console.log(JSON.parse(localStorage.getItem("cart")).length);
 displayItems(cartItems);
 
 function displayItems(cartItems) {

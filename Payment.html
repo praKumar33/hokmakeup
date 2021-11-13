@@ -134,7 +134,7 @@
                 <div id="merchant-name" style="font-size: 24px ;margin: 0px;padding: 0px;">HOK Makeup</div>
                 <p style="margin: 0px;padding: 0px;color: rgb(119, 117, 119);font-size: 10px;"> HOK Makeup -
                     #24206926643373</p>
-                ₹ 549
+                <span class="amount"></span>
             </div>
         </div>
         <div>
@@ -166,15 +166,18 @@
 </html>
 <script>
     document.getElementById("pay").addEventListener("click", function () {
-        var number = document.getElementById("number").value;
-        var month = document.getElementById("month").value;
-        var cvv = document.getElementById("cvv").value;
+        var number = document.getElementById("number");
+        var month = document.getElementById("month");
+        var cvv = document.getElementById("cvv");
         console.log(month, cvv, number)
-        if (number.length == 16 && cvv.length == 3) {
+        if (number.value.length == 16 && cvv.value.length == 3) {
             alert("payment successful")
         }
         else {
             alert("Invalid card number or cvv")
         }
     })
+    document.querySelector(".amount").textContent = JSON.parse(localStorage.getItem("cart")).reduce(function (a, b) {
+        return a + b.price
+    }, 0)
 </script>

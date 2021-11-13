@@ -161,7 +161,7 @@ rightArrow.addEventListener("click", function () {
 cartCountDisplay();
 function cartCountDisplay() {
   document.querySelector(".cartCount").textContent =
-    JSON.parse(localStorage.getItem("cartCount")) || 0;
+    JSON.parse(localStorage.getItem("cart")).length || 0;
 }
 ///////////////////////////////////////
 // hower

@@ -19,19 +19,58 @@
                             href="payment.html">payment</a> </p>
                 </div>
             </div>
-            <div class="content-info">
+            <div class="contact-info">
                 <h2>Contact information</h2>
+                <input type="text" placeholder="Email or mobile phone number">
+                <p><input type="checkbox"> Email me with news and offers</p>
             </div>
-            <div class="email-mobile">
-                <input type="text">
-                <p>Enter an email or mobile phone number</p>
-                <h5><input type="checkbox"> Email me with news and offers</h5>
+            <div class="shipping-info">
+                <h2>Shipping address</h2>
+                <input id="fName" type="text" placeholder="First name">
+                <input id="lName" type="text" placeholder="Last name">
+                <br />
+                <br />
+                <input type="text" id="address" placeholder="Address">
+                <br />
+                <br />
+                <input type="text" id="apartment" placeholder="Apartment, suite, etc. (optional)">
+                <br />
+                <br />
+                <input type="text" id="city" placeholder="City">
+                <br />
+                <br />
+                <input type="text" id="country" placeholder="Country">
+                <input type="text" id="state" placeholder="State">
+                <input type="number" id="pin" placeholder="Pincode">
+                <br />
+                <br />
+                <input id="phone" type="number" placeholder="Phone">
+                <br />
+                <p><input type="checkbox" id="allInformation"> Save this informartion for next time</p>
             </div>
-            <div></div>
-            <div></div>
+            <div id="bottom">
+                <a href="cart.html">
+                    <h4>Return to cart</h4>
+                </a>
+               <a href="payment.html"> <button>Continue to shipping</button> </a>
+            </div>
+            <hr>
+            <div id="policy">
+                <p>Refund policy</p>
+                <p>Shipping Policy</p>
+                <p>Privacy policy</p>
+                <p>Terms of service</p>
+            </div>
         </div>
-        <div class="right-sec"></div>
+        <div class="right-sec">
+        </div>
     </div>
 </body>
 
 </html>
+
+<script>
+    function returnCart() {
+        window.location.href = "cart.html"
+    }
+</script>

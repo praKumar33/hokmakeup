@@ -1,6 +1,6 @@
 var data = JSON.parse(localStorage.getItem("item"));
 document.querySelector(".cartCount").textContent =
-  JSON.parse(localStorage.getItem("cartCount")) || 0;
+  JSON.parse(localStorage.getItem("cart")).length || 0;
 var container = document.querySelector(".product-display");
 var item = data[0];
 var imgArr = item.img2;
@@ -183,7 +183,7 @@ document.querySelector(".item-to-wish").addEventListener("click", function () {
 
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 document.querySelector(".item-to-cart").addEventListener("click", function () {
-  var cartCount = JSON.parse(localStorage.getItem("cartCount")) || 0;
+  var cartCount = JSON.parse(localStorage.getItem("cart")).length || 0;
   var total = +document.querySelector(".total-price").textContent.split("₹")[1];
   var quantity = document.getElementById("counter-dis").value;
   if (document.querySelector(".item-to-cart").textContent == "ADD TO CART") {
@@ -194,16 +194,18 @@ document.querySelector(".item-to-cart").addEventListener("click", function () {
     cartArr.push(cartItem);
     localStorage.setItem("cart", JSON.stringify(cartArr));
     document.querySelector(".item-to-cart").textContent = "REMOVE FROM CART";
-    localStorage.setItem("cartCount", JSON.stringify(cartCount));
+    document.querySelector(".cartCount").textContent =
+      JSON.parse(localStorage.getItem("cart")).length || 0;
   } else {
     cartCount--;
     cartArr.pop();
     localStorage.setItem("cart", JSON.stringify(cartArr));
     document.querySelector(".item-to-cart").textContent = "ADD TO CART";
-    localStorage.setItem("cartCount", JSON.stringify(cartCount));
+    document.querySelector(".cartCount").textContent =
+      JSON.parse(localStorage.getItem("cart")).length || 0;
   }
   document.querySelector(".cartCount").textContent =
-    JSON.parse(localStorage.getItem("cartCount")) || 0;
+    JSON.parse(localStorage.getItem("cart")).length || 0;
 });
 ///////////////////////////////////////
 var data = JSON.parse(localStorage.getItem("data"));
@@ -293,4 +295,5 @@ var cart = JSON.parse(localStorage.getItem("cart")) || [];
 document.querySelector(".item-buy").addEventListener("click", function () {
   cart.push(item);
   localStorage.setItem("cart", JSON.stringify(cart));
+  location.href = "checkout.html";
 });
